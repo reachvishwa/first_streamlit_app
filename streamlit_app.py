@@ -1,4 +1,5 @@
 import streamlit;
+import pandas;
 streamlit.title('My parents New Healthy Diner');
 streamlit.header('Breakfast Menu');
 streamlit.text('🥗Omega3 & 🥣 Blueberry 🥗Oatmeal');
