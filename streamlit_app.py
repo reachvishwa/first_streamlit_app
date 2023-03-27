@@ -39,4 +39,5 @@ streamlit.text(fruityvice_response.json());
 # transposes the json response into a tabular form
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json());
 # write your own comment - what does this do?
+# displays data as a table with unique row identifier
 streamlit.dataframe(fruityvice_normalized);
