@@ -1,5 +1,6 @@
 import streamlit;
 import pandas;
+import requests;
 streamlit.title('My parents New Healthy Diner');
 streamlit.header('Breakfast Menu');
 streamlit.text('🥗Omega3 & 🥣 Blueberry 🥗Oatmeal');
@@ -26,4 +27,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected];
 # display the data frame
 streamlit.dataframe(fruits_to_show);
 
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon");
+streamlit.text(fruityvice_response);
 
+streamlit.header("Fruityvice Fruit Advice!")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon");
+streamlit.text(fruityvice_response.jason());
